@@ -9,9 +9,6 @@ public  class GravitySimulation extends JPanel {
     private static final double G = 6.67430e-11; // gravitational constant
     private static final double DT = 5000; // time variable
 
-    // change Earth to blue and moon to white (I can't figure out how to change one at a time)
-    // get y axis working
-
     private List<Body> bodies;
 
     public GravitySimulation() {
