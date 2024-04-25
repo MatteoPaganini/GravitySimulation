@@ -22,7 +22,7 @@ public  class GravitySimulation extends JPanel {
         // I got one of the planets to show up when I changed the above x for earth and moon
         bodies.get(0).name = "earth";
         System.out.println(bodies.get(0).name + "(" + bodies.get(0).x + ", " + bodies.get(0).y + ")");
-        bodies.add(new Body(7.347e1, WIDTH / 2 - 100, HEIGHT / 2, 0, (6.0e-5))); // Moon
+        bodies.add(new Body(7.347e1, WIDTH / 2 - 100, HEIGHT / 2, 0, (6.0 * Math.random()*1.0e-5))); // Moon
         System.out.println(bodies.get(0).name + "(" + bodies.get(1).x + ", " + bodies.get(1).y + ")");
         bodies.get(1).name = "moon";
 
