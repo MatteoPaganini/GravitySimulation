@@ -22,7 +22,7 @@ public class Main {
                 simulation.update();
                 simulation.repaint();
                 try {
-                    Thread.sleep(10); // Adjust the speed of simulation
+                    Thread.sleep(10); // speed of each individual update
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }

@@ -39,6 +39,7 @@ public  class GravitySimulation extends JPanel {
                     double force = G * body.mass * other.mass / (rSquared);
                     double ax = force * dx / r / body.mass;
                     double ay = force * dy / r / body.mass;
+                    //declaration of physics specific variables
                     body.ax += ax;
                     body.ay += ay;
                 }
@@ -48,7 +49,7 @@ public  class GravitySimulation extends JPanel {
         // Update position and velocity of each body
         for (Body body : bodies) {
             body.update(DT);
-        }
+        } //sets the speed for the simulation
     }
 
 
@@ -73,7 +74,6 @@ public  class GravitySimulation extends JPanel {
                 g2d.fillOval((int) (body.x), (int) (body.y), 10, 10);
 
             }
-            // why -5?
             System.out.print(body.name + ": (" + body.x +", "+ body.y + ")   ");
         }
         System.out.println();
@@ -97,6 +97,6 @@ public  class GravitySimulation extends JPanel {
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
-        }
+        } //painting the simulation to the screen
     }
 }

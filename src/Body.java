@@ -7,9 +7,9 @@ public class Body {
 
     public Body(double mass, double x, double y, double vx, double vy) {
         this.mass = mass;
-        this.x = x; // position
+        this.x = x;
         this.y = y;
-        this.vx = vx; // velocity
+        this.vx = vx;
         this.vy = vy;
     }
 
@@ -19,4 +19,4 @@ public class Body {
         x += vx * dt;
         y += vy * dt;
     } //physics
-}
+} //dt is the time step that determines the speed of the simulation
