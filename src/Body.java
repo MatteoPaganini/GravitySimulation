@@ -2,7 +2,7 @@ public class Body {
     double mass;
     double x, y;
     double vx, vy;
-    double ax, ay;
+    double  ax, ay;
     String name;
 
     public Body(double mass, double x, double y, double vx, double vy) {

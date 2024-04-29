@@ -9,7 +9,7 @@ public class Main {
 
     public static void main(String[] args) {
 
-
+        //invoke later: at the bottom of the next class
         SwingUtilities.invokeLater(() -> {
             JFrame frame = new JFrame("Gravity Simulation");
             GravitySimulation simulation = new GravitySimulation();
