@@ -27,18 +27,18 @@ public  class GravitySimulation extends JPanel {
 
     public void update() {
         // Calculate acceleration for each body
-        for (Body body : bodies) {
+        for (Body body1 : bodies) {
             body.ax = 0;
             body.ay = 0;
-            for (Body other : bodies) {
-                if (body != other) {
-                    double dx = other.x - body.x;
-                    double dy = other.y - body.y;
-                    double rSquared = dx * dx + dy * dy;
-                    double r = Math.sqrt(rSquared);
-                    double force = G * body.mass * other.mass / (rSquared);
-                    double ax = force * dx / r / body.mass;
-                    double ay = force * dy / r / body.mass;
+            for (Body body2 : bodies) {
+                if (body1 != body2) {
+                    double dx = body2.x - body1.x; //distance between Moon and Earth in x direction (i hat)
+                    double dy = body2.y - body1.y; //distance between Moon and Earth in y direction (j hat)
+                    double rSquared = dx * dx + dy * dy; //pythagorian theorem
+                    double r = Math.sqrt(rSquared); //radius
+                    double force = G * body1.mass * body2.mass / (rSquared); //force of gravity
+                    double ax = force * dx / r / body.mass; //accelerate in x using F(g)
+                    double ay = force * dy / r / body.mass; //acceleration in y using F(g)
                     //declaration of physics specific variables
                     body.ax += ax;
                     body.ay += ay;
